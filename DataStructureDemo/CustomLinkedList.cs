@@ -10,7 +10,7 @@ namespace DataStructureDemo
 /// </summary>
     class CustomLinkedList
     {/// <summary>
-    /// UC1 insert a element at last in linked list
+    /// UC2 insert a element at front in linked list
     /// </summary>
         Node head;
         
@@ -39,6 +39,18 @@ namespace DataStructureDemo
                 temp = temp.next;
             }
             return temp;
+        }
+
+       //method for inserting element at front
+       public void InsertFront(int new_data)
+        {
+            //We will create a new node.The next of the node will point to the head of the linked list
+            Node new_node = new Node(new_data);
+            //When we want to add any node at the front,we want the head to point to it.
+            new_node.next = this.head;
+            //The previous Head node is now the second node of the linked list because the new node is added at the front 
+            this.head = new_node;
+            Console.WriteLine("Inserted into list" +new_node.data);
         }
 
        //method for displaying elements in linked list
