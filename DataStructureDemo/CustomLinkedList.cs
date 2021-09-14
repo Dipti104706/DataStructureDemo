@@ -53,6 +53,12 @@ namespace DataStructureDemo
             Console.WriteLine("Inserted into list" +new_node.data);
         }
 
+       //Method for Appending elements at last in the list
+       public void Append(int new_data)
+        {
+            InsertLast(new_data);
+        }
+
        //method for displaying elements in linked list
        public void Display()
         {
