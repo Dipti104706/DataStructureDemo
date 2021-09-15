@@ -10,7 +10,7 @@ namespace DataStructureDemo
 /// </summary>
     class CustomLinkedList
     {/// <summary>
-    /// UC8 search a element and insert a node after that in linked list
+    /// UC9 delete a node,then display the size of linked list
     /// </summary>
         public Node head;
         
@@ -134,7 +134,7 @@ namespace DataStructureDemo
             return value;
         }
 
-        //method 
+        //method to find and insert after that
         public void FindAndInsert(Node exist_node,int new_data)
         {
             if(exist_node==null)
@@ -146,6 +146,44 @@ namespace DataStructureDemo
             new_node.next = exist_node.next;
             exist_node.next = new_node;
         }
+
+        //method to find a node and delete that
+        public void DeleteNode(int value)
+        {
+            //head node stored in temp
+            Node temp = head, prev = null;
+            //checking the head node holding the value
+            if(temp!=null && temp.data==value)
+            {
+                head = temp.next;
+            }
+            //search for value to delete,also update previous node as temp.next
+            while(temp != null && temp.data != value)
+            {
+                prev = temp;
+                temp = temp.next;
+            }
+
+            if (temp == null)
+            {
+                Console.WriteLine("Given node is not present");
+            }  
+            //delete node 
+            prev.next = temp.next; 
+        }
+        //method to show size of linked list
+        public int Size()
+        {
+            Node temp = head;
+            int count = 0;
+            while(temp!=null)
+            {
+                count++;
+                temp = temp.next;
+            }
+            return count;
+        }
+
         //method for displaying elements in linked list
         public void Display()
         {
