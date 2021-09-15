@@ -10,7 +10,7 @@ namespace DataStructureDemo
 /// </summary>
     class CustomLinkedList
     {/// <summary>
-    /// UC2 insert a element at front in linked list
+    /// UC5 delete a first element in linked list
     /// </summary>
         Node head;
         
@@ -82,9 +82,21 @@ namespace DataStructureDemo
             new_node.next = pos.next;
             pos.next = new_node;
         }
-       
-       //method for displaying elements in linked list
-       public void Display()
+
+        //method to delete first node
+        public int DeleteFirstNode()
+        {
+            if (this.head == null)
+            {
+                return 0;
+            }
+            int deleteNode = this.head.data;
+            this.head = this.head.next;
+            return deleteNode;
+        }
+
+        //method for displaying elements in linked list
+        public void Display()
         {
             Console.WriteLine("Displaying Nodes");
             Node temp = this.head;
