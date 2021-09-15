@@ -10,7 +10,7 @@ namespace DataStructureDemo
 /// </summary>
     class CustomLinkedList
     {/// <summary>
-    /// UC9 delete a node,then display the size of linked list
+    /// UC10 sort a linked list
     /// </summary>
         public Node head;
         
@@ -182,6 +182,30 @@ namespace DataStructureDemo
                 temp = temp.next;
             }
             return count;
+        }
+
+        //method for sort the linked list
+        public void Sort()
+        {
+            Node temp = head;
+            Node firstVal = null;
+            int val = 0;
+            while(temp!=null)
+            {
+                firstVal = temp.next;
+                while(firstVal!=null)
+                {
+                    if(temp.data>firstVal.data)
+                    {
+                        val = firstVal.data;
+                        firstVal.data = temp.data;
+                        temp.data = val;
+                    }
+                    firstVal = firstVal.next;
+                }
+                temp = temp.next;
+            }
+            Console.WriteLine("Sorted list");
         }
 
         //method for displaying elements in linked list
