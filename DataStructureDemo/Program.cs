@@ -16,10 +16,14 @@ namespace DataStructureDemo
             //list.AddLast(70);
 
             LinkQueue queue = new LinkQueue();
-            queue.LinkEnqueue(56);
-            queue.LinkEnqueue(30);
-            queue.LinkEnqueue(70);
-            queue.LinkQueueDisplay();
+            queue.Enqueue(56);
+            queue.Enqueue(30);
+            queue.Enqueue(70);
+            Console.WriteLine("The queue before deletion:");
+            queue.Display();
+            queue.Dequeue();
+            Console.WriteLine("The queue after deletion:");
+            queue.Display();
             Console.ReadLine();
         }
     }
