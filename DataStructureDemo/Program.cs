@@ -15,13 +15,19 @@ namespace DataStructureDemo
             //list.AddLast(30);
             //list.AddLast(70);
 
-            CustomLinkedList customLinkedList = new CustomLinkedList();
-            customLinkedList.InsertLast(56);
-            customLinkedList.InsertLast(30);
-            customLinkedList.InsertLast(40);
-            customLinkedList.InsertLast(70);
-            customLinkedList.Sort();
-            customLinkedList.Display();
+            LinkedStack stack = new LinkedStack();
+            stack.LinkPush(70);
+            stack.LinkPush(30);
+            stack.LinkPush(56);
+            stack.LinkStackDisplay();
+            //stack.Peek();
+            //stack.Pop();
+            //stack.IsEmpty();
+            //CustomLinkedList obj1 = new CustomLinkedList();
+            //obj1.InsertLast(70);
+            //obj1.InsertLast(56);
+            //obj1.InsertLast(30);
+            //obj1.Display();
             Console.ReadLine();
         }
     }
