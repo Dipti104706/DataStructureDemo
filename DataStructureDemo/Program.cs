@@ -15,23 +15,11 @@ namespace DataStructureDemo
             //list.AddLast(30);
             //list.AddLast(70);
 
-            LinkedStack stack = new LinkedStack();
-            //stack.LinkPush(70);
-            //stack.LinkPush(30);
-            //stack.LinkPush(56);
-            //stack.LinkStackDisplay();
-	    stack.Push(70);
-	    stack.Push(30);
-	    stack.Push(56);
-	    stack.Display();
-            stack.Peek();
-            stack.Pop();
-            stack.IsEmpty();
-            //CustomLinkedList obj1 = new CustomLinkedList();
-            //obj1.InsertLast(70);
-            //obj1.InsertLast(56);
-            //obj1.InsertLast(30);
-            //obj1.Display();
+            LinkQueue queue = new LinkQueue();
+            queue.LinkEnqueue(56);
+            queue.LinkEnqueue(30);
+            queue.LinkEnqueue(70);
+            queue.LinkQueueDisplay();
             Console.ReadLine();
         }
     }
